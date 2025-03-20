@@ -1,0 +1,19 @@
+.hero-section-container {
+    min-height: 90vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+    
+    
+    
+    
+    
+}
+.left-img {
+    margin-top: 100px;
+}
+.right-form {
+    margin-top: 100px;
+}

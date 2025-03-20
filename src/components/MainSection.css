@@ -1,0 +1,102 @@
+.main-section {
+    background-color: #181818;
+    padding: 80px 20px 0 20px;
+    text-align: center;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    position: relative; /* For overlay if needed */
+    overflow: hidden; /* Prevent horizontal scroll from animations */
+  }
+  
+  .main-section-heading {
+    margin-bottom: 60px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInSlideDown 0.8s ease-out forwards 0.3s; /* Delay added */
+  }
+  
+  .main-section-heading h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #fff;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .grid-item {
+    background: linear-gradient(135deg, #282828, #333);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    transition: transform 1s ease, box-shadow 1s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInSlideUp 0.8s ease-out forwards;
+    animation-delay: 2s;
+  }
+  
+  /* .grid-item:nth-child(even) {
+    animation-delay: 3s; /* Staggered animation 
+  } */
+  
+  .grid-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+  }
+  
+  .grid-icon {
+    font-size: 4rem;
+    margin-bottom: 30px;
+    color: #60a5fa;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .grid-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: 500;
+    color: #ddd;
+  }
+  
+  .grid-item p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #bbb;
+  }
+  
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Animations */
+  @keyframes fadeInSlideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInSlideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

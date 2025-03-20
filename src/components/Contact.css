@@ -1,0 +1,33 @@
+.contact-section {
+    background-color: #181818;
+    color: white;
+    padding: 50px 20px; /* Increased padding for a section */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .contact-column {
+    padding: 10px;
+  }
+  
+  .contact-column h3 {
+    font-size: 1.5rem; /* Larger heading for a section */
+    margin-bottom: 15px;
+    color: #ddd;
+  }
+  
+  .contact-column p {
+    font-size: 1.1rem; /* Larger paragraph for a section */
+    line-height: 1.7;
+    color: #bbb;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .contact-section {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  }

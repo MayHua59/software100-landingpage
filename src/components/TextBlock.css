@@ -1,0 +1,72 @@
+.another-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 20px 50px 20px;
+  background-color: #181818;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.another-section.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.text-column,
+.image-column {
+  flex: 1 1 50%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+.text-column h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ddd;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.text-column ul li {
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #bbb;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.another-section.animated .text-column h2,
+.another-section.animated .text-column ul li {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.image-column img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0; /* Initial opacity for fade-in */
+  transition: opacity 0.8s ease; /* Transition for fade-in */
+}
+
+.another-section.animated .image-column img {
+  opacity: 1; /* Fade in when animated class is present */
+}
+
+/* Shaking Animation Removed */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .text-column,
+  .image-column {
+    flex: 1 1 100%;
+  }
+}
